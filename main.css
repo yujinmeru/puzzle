@@ -1,0 +1,256 @@
+body {
+  background-color: #202230;
+  font-family: 'Segoe UI', Verdana, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  user-select: none;
+}
+
+.button {
+  background-color: #226DE2;
+  border-radius: 10px;
+  color: #f0f1f7;
+  cursor: pointer;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #1B62CF;
+}
+
+.button-upload {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 8%;
+  z-index: 1;
+}
+
+.button-upload label {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.button-upload input {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.bar {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 1;
+}
+
+.bar-left {
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  justify-content: space-between;
+  left: 0;
+  padding: 30px 10px 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+}
+
+.bar-bottom {
+  border-radius: 10px 10px 0 0;
+  bottom: 0;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  left: 50%;
+  padding: 10px 30px;
+  transform: translateX(-50%);
+  width: 560px;
+}
+
+.bar-bottom .button-upload {
+  background-color: #f0f1f7;
+  color: #226DE2;
+  left: 0;
+  position: relative;
+  top: 0;
+  transform: none;
+}
+
+.bar-bottom .button-upload:hover {
+  background-color: #dfe1ee;
+}
+
+.slider-wrapper input {
+  display: block;
+  height: 40px;
+  margin: 0;
+  width: 300px;
+}
+
+.slider-wrapper-vertical {
+  transform: rotate(90deg) translateX(-40px);
+  transform-origin: left bottom;
+}
+
+.slider-wrapper-horizontal {
+  left: 50px;
+  top: 10px;
+}
+
+.cell-count {
+  color: #F3F3F3;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+}
+
+.puzzle-grid {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.puzzle-grid table {
+  border-collapse: collapse;
+  height: 100%;
+  width: 100%;
+}
+
+.puzzle-grid td {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+}
+
+.croppie-wrapper {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.croppie-container .cr-viewport,
+.croppie-container .cr-resizer {
+  border: none !important;
+}
+
+.image-full,
+.image-puzzle {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-full {
+  z-index: 2;
+}
+
+.image-puzzle .row {
+  align-content: flex-start;
+  display: flex;
+}
+
+.image-puzzle .item {
+  position: absolute;
+  transition: transform 0.2s linear;
+}
+
+.image-puzzle .item.active {
+  cursor: pointer;
+}
+
+.image-puzzle .item.selected {
+  outline: 1px solid #FFEB3B;
+  z-index: 1;
+}
+
+.image-puzzle .item:after {
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.image-puzzle .item.selected:after {
+  border-color: #FFEB3B;
+}
+
+.image-puzzle .item:not(.active):after {
+  border-color: transparent;
+}
+
+.menu {
+  background-color: #202230;
+  bottom: 0;
+  left: -200px;
+  padding: 60px 20px 0;
+  position: absolute;
+  top: 0;
+  transition: left 0.2s ease-in-out;
+  width: 160px;
+  z-index: 3;
+}
+
+.menu.show {
+  left: 0;
+}
+
+.menu.button-upload {
+  position: relative;
+}
+
+.menu-button {
+  border-radius: 10px;
+  color: #EEE;
+  cursor: pointer;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  left: 10px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  transition: background-color 0.2s ease;
+  width: 40px;
+  z-index: 3;
+}
+
+.menu-button:hover {
+  background-color: rgba(32, 34, 48, 0.5);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}

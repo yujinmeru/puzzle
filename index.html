@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang ="ru">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puzzle</title>
+  <link rel="stylesheet" href="assets/croppie.css" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+  <div class="croppie-wrapper"></div>
+  <div class="image-puzzle"></div>
+  <div class="image-full">
+    <img>
+  </div>
+  <div class="puzzle-grid"></div>
+
+  <div class="menu"></div>
+  <div class="menu-button">☰</div>
+
+  <div class="button button-upload">
+    Upload
+    <input type="file" id="puzzleUpload" multiple>
+    <label for="puzzleUpload"></label>
+  </div>
+
+  <div class="bar bar-left">
+    <div class="slider-wrapper slider-wrapper-vertical">
+      <input type="range" min="4" max="15" step="1" id="sliderVertical">
+    </div>
+    <div class="cell-count cell-count-vertical">12</div>
+  </div>
+
+  <div class="bar bar-bottom">
+    <div class="slider-wrapper slider-wrapper-horizontal">
+      <input type="range" min="6" max="25" step="1" id="sliderHorizontal">
+    </div>
+    <div class="cell-count cell-count-horizontal">20</div>
+    <div class="button button-done">Done</div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <script src="assets/jquery.min.js"></script>
+  <script src="assets/croppie.js"></script>
+  <script src="assets/underscore-min.js"></script>
+  <script src="puzzle.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
